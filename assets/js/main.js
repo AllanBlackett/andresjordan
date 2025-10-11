@@ -89,13 +89,13 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
 // Why Choose Us 
 function togglePlayButton() {
         // Select all elements with the .cs-picture class
-        const pictures = document.querySelectorAll('#why-choose-1876 .cs-video-wrapper');
+        const pictures = document.querySelectorAll('#why-choose-1840 .cs-video-wrapper');
 
         // Add a click event listener to each .cs-picture element
         pictures.forEach(picture => {
             picture.addEventListener('click', () => {
                 // Select all elements with the .cs-play class
-                const playButtons = document.querySelectorAll('#why-choose-1876 .cs-play');
+                const playButtons = document.querySelectorAll('#why-choose-1840 .cs-play');
 
                 // Toggle the .cs-hide class on each .cs-play element
                 playButtons.forEach(button => {
@@ -110,7 +110,7 @@ function togglePlayButton() {
 
     function toggleVideoPlayback() {
         // Select the video element
-        const video = document.querySelector('#why-choose-1876 video');
+        const video = document.querySelector('#why-choose-1840 video');
 
         // Add a click event listener to the video
         video.addEventListener('click', () => {
@@ -125,5 +125,6 @@ function togglePlayButton() {
 
     // Call the function to activate the event listener
     toggleVideoPlayback();
+                                
                                 
                                   
