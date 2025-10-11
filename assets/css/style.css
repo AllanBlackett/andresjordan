@@ -731,7 +731,7 @@ html {
 }
 
 /*-- -------------------------- -->
-<---           Hero             -->
+<---       Hero - Video         -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -1168,245 +1168,11 @@ html {
 <---           Hero Ends        -->
 <--- -------------------------- -*/      
 
-/*? Old Image Hero Section */
 /*-- -------------------------- -->
-<---            Hero            -->
+<---          Back-up Classes   -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #hero-1802 {
-    /* 200px - 244px top */
-    /* 60px - 100px  bottom */
-    padding: clamp(12.5rem, 16.82vw, 15.25rem) 1rem 0;
-    background-color: #1a1a1a;
-    /* clips the svg wave from overflowing */
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-  }
-  #hero-1802 .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-  }
-  #hero-1802 .cs-content {
-    text-align: center;
-    max-width: 39.375rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    z-index: 2;
-  }
-  #hero-1802 .cs-topper {
-    font-size: 1.5rem;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
-    display: inline-block;
-  }
-  #hero-1802 .cs-title {
-    /* 39px - 84px */
-    font-size: clamp(2.4375rem, 6.3vw, 5.25rem);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: inherit;
-    /* 23 characters including spaces wide */
-    max-width: 23ch;
-    margin: 0 0 1rem 0;
-    color: var(--bodyTextColorWhite);
-    position: relative;
-    text-shadow: 1px 2px 3px rgba(255, 255, 255, 0.8);
-  }
-  #hero-1802 .cs-text {
-    /* 16px - 20px */
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.5em;
-    text-align: inherit;
-    width: 100%;
-    max-width: 33.1875rem;
-    margin: 0 0 2rem 0;
-    color: var(--bodyTextColorWhite);
-    opacity: 0.8;
-  }
-  #hero-1802 .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    min-width: 9.375rem;
-    padding: 0 1.5rem;
-    background-color: var(--primary);
-    border-radius: 0.25rem;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-  }
-  #hero-1802 .cs-button-solid:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background: #1a1a1a;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 0.25rem;
-    transition: width 0.3s;
-  }
-  #hero-1802 .cs-button-solid:hover:before {
-    width: 100%;
-  }
-  #hero-1802 .cs-button-solid:hover {
-    color: var(--bodyTextColorWhite);
-  }
-
-  #hero-1802 .cs-video-group {
-    width: 100%;
-    height: 100vw;
-    min-height: 21.25rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    position: relative;
-    z-index: 1;
-  }
-  #hero-1802 .cs-video-group:before {
-    /* light grey section background. We attach it as a pseudo to the video group so it can be responsive and anchored in position to always be in the same position behind the cs-box */
-    content: '';
-    width: 300vw;
-    height: 500%;
-    background: #000;
-    opacity: 0.3;
-    position: absolute;
-    display: block;
-    bottom: 3.375rem;
-    left: 50%;
-    z-index: -1;
-    transform: translateX(-50%);
-  }
-  #hero-1802 .cs-box {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    /* 24px - 32px */
-    padding: clamp(1.5rem, 4vw, 2rem);
-    background-color: var(--primary);
-    display: flex;
-    align-items: flex-start;
-    /* 16px - 24px */
-    gap: clamp(1rem, 2vw, 1.5rem);
-    border-radius: 10px;
-  }
-  #hero-1802 .cs-header {
-    /* 20px - 25px */
-    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
-    line-height: 1.2em;
-    font-weight: bold;
-    margin: auto 0;
-    padding: 0;
-    color: #fff;
-  }
-  #hero-1802 .cs-box-icon {
-    /* 40px - 48px */
-    width: clamp(2.5rem, 4vw, 3rem);
-  }
-  #hero-1802 .cs-video-wrapper {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: relative;
-    overflow: hidden; /* Ensures no unwanted scrollbars */
-}
-    
-  #hero-1802 .cs-video-wrapper video img,
-  #hero-1802 .cs-video-wrapper .cs-picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /* makes image act as a background image */
-    object-fit: cover;
-    border-radius: 10px;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #hero-1802 .cs-container {
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-  }
-  #hero-1802 .cs-content {
-    text-align: left;
-    width: 47%;
-    /* 168px - 300pxm this maintains consistent space between the cs content and the cs-box so no matter how much content you add here, there will always be X amount of padding between the bottom of the cs-content and the bottom of the cs-video-group */
-    padding-bottom: clamp(10.5rem, 30vw, 18.75rem);
-    flex: none;
-    align-items: flex-start;
-    align-self: flex-start;
-  }
-  #hero-1802 .cs-title {
-    max-width: 10ch;
-  }
-  #hero-1802 .cs-video-group {
-    width: 100%;
-    height: auto;
-    min-height: 30rem; /* Adjusted for better scaling */
-}
-  #hero-1802 .cs-video-group:before {
-    bottom: 6.25rem;
-  }
-  #hero-1802 .cs-video-wrapper {
-    /* changes back to 100% at desktop */
-    height: 90%;
-  }
-  #hero-1802 .cs-box {
-    width: 80%;
-    max-width: 19.1875rem;
-    flex-direction: column;
-    position: absolute;
-    /* chnages to 48px at desktop */
-    bottom: 0;
-    /* -112px to 200px */
-    left: calc(clamp(7.25rem, 17vw, 12.5rem)*-1);
-  }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #hero-1802 .cs-video-wrapper {
-    height: 100%;
-  }
-  #hero-1802 .cs-box {
-    bottom: 3rem;
-  }
-}
-
-/*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
+/* @media only screen and (min-width: 0rem) {
   #services-1802 {
     padding: var(--sectionPadding);
     background-color: #1a1a1a;
@@ -1422,12 +1188,10 @@ html {
     gap: clamp(3rem, 6vw, 4rem);
   }
   #services-1802 .cs-content {
-    /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
   #services-1802 .cs-title {
@@ -1441,7 +1205,6 @@ html {
   }
   #services-1802 .cs-button-solid {
     font-size: 1rem;
-    /* 46px - 56px */
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
     text-decoration: none;
     font-weight: 700;
@@ -1455,7 +1218,6 @@ html {
     display: inline-block;
     position: relative;
     z-index: 1;
-    /* prevents padding from adding to the width */
     box-sizing: border-box;
   }
   #services-1802 .cs-button-solid:before {
@@ -1484,17 +1246,14 @@ html {
     display: grid;
     align-items: stretch;
     grid-template-columns: repeat(12, 1fr);
-    /* 16px - 20px */
     gap: clamp(1rem, 2vw, 1.25rem);
   }
   #services-1802 .cs-item {
     text-align: center;
     list-style: none;
     width: 100%;
-    /* 240px - 320px */
     height: clamp(15rem, 40vw, 20rem);
     margin: 0;
-    /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     padding: 0;
     background-color: #000;
@@ -1518,10 +1277,8 @@ html {
     text-decoration: none;
     width: 100%;
     height: 100%;
-    /* padding goes on the link, not the cs-item as is normal. We do this because we want the whole card to be hoverable. So we add the padding to the link tag to create the space inside the card. By adding the space inside the cs-link tag we can make the whole card hoverable since the padding is now contributing to the height and width of the link */
-    /* 16px - 32px */
+  
     padding: clamp(1rem, 3vw, 2rem);
-    /* prevents padding from affecting height and width */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1534,7 +1291,6 @@ html {
     color: rgba(0, 0, 0, 0);
     opacity: 100%;
     position: absolute;
-    /* 16px - 32px */
     right: clamp(1rem, 3vw, 2rem);
     bottom: clamp(1rem, 3vw, 2rem);
     transition: opacity 0.3s, top 0.3s;
@@ -1542,7 +1298,6 @@ html {
     -webkit-text-stroke-color: var(--bodyTextColorWhite);
   }
   #services-1802 .cs-h3 {
-    /* 25px - 31px */
     font-size: clamp(1.5625rem, 2.5vw, 1.9375rem);
     font-weight: 700;
     line-height: 1.2em;
@@ -1560,7 +1315,6 @@ html {
     z-index: -1;
   }
   #services-1802 .cs-background:before {
-    /* background color overlay */
     content: "";
     width: 100%;
     height: 100%;
@@ -1576,7 +1330,6 @@ html {
   #services-1802 .cs-background img {
     width: 100%;
     height: 100%;
-    /* Makes img tag act as a background image */
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -1584,10 +1337,8 @@ html {
     transition: transform 0.6s;
   }
 }
-/* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #services-1802 {
-    /* 32px - 48px */
     padding-top: clamp(4rem, 4vw, 4rem);
   }
   #services-1802 .cs-content {
@@ -1599,7 +1350,11 @@ html {
   #services-1802 .cs-item {
     grid-column: span 4;
   }
-}
+} */
+
+
+
+
 
 /*-- -------------------------- -->
 <!--       Why Choose Us        -->
