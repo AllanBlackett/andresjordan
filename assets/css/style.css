@@ -2488,7 +2488,12 @@ color: #fff;
     grid-column: span 4;
   }
 }
-                                
+
+/* Font Awesome Icon */
+#services-2175 .cs-card-group .cs-h3 i { 
+  color: #e63946 !important; 
+}
+
 /*-- -------------------------- -->
 <---       Pre - CTA - End      -->
 <--- -------------------------- -*/
