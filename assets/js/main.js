@@ -125,6 +125,26 @@ function togglePlayButton() {
 
     // Call the function to activate the event listener
     toggleVideoPlayback();
-                                
+    
+    // FAQ 
+    // One-open-only for the whole section
+const wrapper = document.querySelector('#faq-1261 .cs-wrapper');
+
+wrapper.addEventListener('click', (e) => {
+  const btn = e.target.closest('.cs-button');
+  if (!btn) return; // clicked outside a button
+
+  const item = btn.closest('.cs-faq-item');
+  const isOpen = item.classList.contains('active');
+
+  // close all
+  wrapper.querySelectorAll('.cs-faq-item.active').forEach(i => i.classList.remove('active'));
+
+  // toggle clicked one (re-open only if it wasn't already open)
+  if (!isOpen) item.classList.add('active');
+});
+
+        
+
                                 
                                   
