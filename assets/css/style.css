@@ -1471,7 +1471,7 @@ html {
         margin-left: -0.5rem;
         background: var(--secondary);
         border-radius: 50%;
-        display: block;
+        display: none;
         /* prevents flexbox from squishing it */
         flex: none;
     }
@@ -1596,7 +1596,15 @@ html {
         order: 2;
     }
 }
-
+/* Style FA icons inside the program list */
+#sbsr-1080 .cs-list i[class^="fa-"],
+#sbsr-1080 .cs-list i.fa-solid {
+  font-size: 1.125rem;          /* ~18px */
+  color: var(--secondary);
+  line-height: 1;
+  transform: translateY(2px);   /* slight vertical align */
+  flex: none;
+}
 /*-- -------------------------- -->
 <---    Program / Classes - End -->
 <--- -------------------------- -*/                                
