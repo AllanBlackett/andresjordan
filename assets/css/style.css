@@ -648,7 +648,7 @@ html {
     }
     #cs-navigation .cs-li-link {
         /* 14px - 16px */
-        font-size: clamp(0.875rem, 1vw, 1.5rem);
+        font-size: clamp(0.875rem, 1.1vw, 1.6rem);
         line-height: 1.5em;
         text-decoration: none;
         margin: 0;
@@ -2104,6 +2104,7 @@ html {
   #reviews-1673 {
     padding: var(--sectionPadding);
     margin-top: 6em;
+    margin-bottom: 3em;
     position: relative;
     z-index: 1;
   }
