@@ -1,4 +1,4 @@
-//*Navigation 
+//*Navigation
 // add classes for mobile navigation toggling
 var CSbody = document.querySelector("body");
 const CSnavbarMenu = document.querySelector("#cs-navigation");
@@ -85,6 +85,93 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
           });
       }
   });
+
+// ===== Scroll-Spy + Smooth Menu Behavior (Andrés site) =====
+(() => {
+  const nav = document.getElementById('cs-navigation');
+  if (!nav) return;
+
+  // Close the mobile menu when any nav link is clicked
+  nav.addEventListener('click', (e) => {
+    const link = e.target.closest('a.cs-li-link[href^="#"]');
+    if (!link) return;
+
+    // Close only if the mobile menu is open
+    const hamburger = nav.querySelector('.cs-toggle');
+    const menu = document.getElementById('cs-expanded');
+
+    if (nav.classList.contains('cs-active')) {
+      nav.classList.remove('cs-active');
+      document.body.classList.remove('cs-open');
+      hamburger?.classList.remove('cs-active');
+      menu?.setAttribute('aria-expanded', 'false');
+      hamburger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // ---- Scroll-Spy (set .cs-active on the link whose section is in view) ----
+  const LINKS = Array.from(
+    nav.querySelectorAll('a.cs-li-link[href^="#"]')
+  );
+  if (!LINKS.length) return;
+
+  const linkById = new Map(LINKS.map(a => [a.getAttribute('href').slice(1), a]));
+  const sections = Array.from(document.querySelectorAll('section[id]'))
+    .filter(sec => linkById.has(sec.id));
+
+  const ACTIVE_CLASS = 'cs-active';
+
+  const setActiveLink = (sectionId) => {
+    LINKS.forEach(a => {
+      const isActive = a.getAttribute('href').slice(1) === sectionId;
+      a.classList.toggle(ACTIVE_CLASS, isActive);
+      if (isActive) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+  };
+
+  const headerHeight = () => nav.offsetHeight || 0;
+
+  let io;
+  const buildObserver = () => {
+    io?.disconnect();
+
+    io = new IntersectionObserver((entries) => {
+      // pick the most visible intersecting section
+      let best = null;
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        if (!best || entry.intersectionRatio > best.intersectionRatio) best = entry;
+      }
+      if (best) setActiveLink(best.target.id);
+    }, {
+      root: null,
+      threshold: 0.35,
+      // top margin accounts for fixed header; bottom keeps next section from stealing focus too early
+      rootMargin: `-${headerHeight()}px 0px -45% 0px`
+    });
+
+    sections.forEach(sec => io.observe(sec));
+  };
+
+  buildObserver();
+
+  // Rebuild on resize (header height changes by breakpoint)
+  let t;
+  window.addEventListener('resize', () => {
+    clearTimeout(t);
+    t = setTimeout(buildObserver, 150);
+  });
+
+  // Set initial active link on load (e.g., refresh mid-page)
+  if (sections.length) {
+    const nearest = sections
+      .map(sec => ({ id: sec.id, top: Math.abs(sec.getBoundingClientRect().top - headerHeight()) }))
+      .sort((a,b) => a.top - b.top)[0];
+    if (nearest) setActiveLink(nearest.id);
+  }
+})();
+
 
 // Why Choose Us 
 function togglePlayButton() {

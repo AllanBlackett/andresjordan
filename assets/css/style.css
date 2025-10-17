@@ -89,6 +89,55 @@ body {
   vertical-align: middle;
   margin-left: 5px; /* Adjust space between the line and text */
 }
+
+/* --- Global media rounding --- */
+:root {
+  --media-radius: 10px;
+}
+
+/* Most <img> elements */
+img:not(.cs-logo-img):not(.cs-icon):not(.cs-profile):not(.cs-check-icon) {
+  border-radius: var(--media-radius);
+}
+
+/* Videos too */
+video {
+  border-radius: var(--media-radius);
+}
+
+/* Pictures that position the <img> absolutely:
+   apply the radius to the wrapper and let the img inherit */
+picture,
+.cs-picture,
+.cs-background,
+.cs-video-wrapper {
+  border-radius: var(--media-radius);
+  overflow: hidden;   /* ensures the child image/video corners get clipped */
+}
+
+.cs-picture img,
+.cs-background img {
+  border-radius: inherit; /* keeps corners consistent */
+}
+
+/*? Active Menu Scrolling  */
+/*? Smooth scroll between sections */
+html { scroll-behavior: smooth; }
+
+/* Keep sections from hiding under the fixed header */
+section[id]{
+  /* Your fixed header is ~5.8rem on desktop; 7.5rem is a safe cushion */
+  scroll-margin-top: 7.5rem;
+}
+
+/* (Optional) improve keyboard focus on nav links */
+#cs-navigation .cs-li-link:focus-visible {
+  outline: 2px dashed var(--secondary);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
@@ -776,6 +825,7 @@ html {
     display: none !important;
   }
 }
+
 
 /*-- -------------------------- -->
 <---       Hero - Video         -->
