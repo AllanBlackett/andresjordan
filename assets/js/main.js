@@ -137,19 +137,20 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
     io?.disconnect();
 
     io = new IntersectionObserver((entries) => {
-      // pick the most visible intersecting section
-      let best = null;
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        if (!best || entry.intersectionRatio > best.intersectionRatio) best = entry;
-      }
-      if (best) setActiveLink(best.target.id);
-    }, {
-      root: null,
-      threshold: 0.35,
-      // top margin accounts for fixed header; bottom keeps next section from stealing focus too early
-      rootMargin: `-${headerHeight()}px 0px -45% 0px`
-    });
+  let mostVisible = null;
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    if (!mostVisible || entry.intersectionRatio > mostVisible.intersectionRatio)
+      mostVisible = entry;
+  }
+  if (mostVisible) setActiveLink(mostVisible.target.id);
+}, {
+  root: null,
+  // detect even small visibility at top, good for hero sections
+  threshold: [0, 0.1, 0.25, 0.5, 0.75],
+  // smaller negative margin so hero counts properly at page top
+  rootMargin: `-${headerHeight() * 0.3}px 0px -60% 0px`
+});
 
     sections.forEach(sec => io.observe(sec));
   };
