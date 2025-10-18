@@ -157,6 +157,17 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
 
   buildObserver();
 
+  // Fix for "Inicio" not highlighting at very top of page
+  const heroLink = linkById.get('hero-2042');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    // if you're within 200px of the very top, force highlight "Inicio"
+    if (scrollY < 200 && heroLink) {
+      LINKS.forEach(a => a.classList.remove(ACTIVE_CLASS));
+      heroLink.classList.add(ACTIVE_CLASS);
+    }
+  });
+
   // Rebuild on resize (header height changes by breakpoint)
   let t;
   window.addEventListener('resize', () => {
