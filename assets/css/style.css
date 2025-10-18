@@ -102,15 +102,14 @@ img:not(.cs-logo-img):not(.cs-icon):not(.cs-profile):not(.cs-check-icon) {
 
 /* Videos too */
 video {
-  border-radius: var(--media-radius);
+  /* border-radius: var(--media-radius); */
 }
 
 /* Pictures that position the <img> absolutely:
    apply the radius to the wrapper and let the img inherit */
 picture,
 .cs-picture,
-.cs-background,
-.cs-video-wrapper {
+.cs-background {
   border-radius: var(--media-radius);
   overflow: hidden;   /* ensures the child image/video corners get clipped */
 }
@@ -1781,6 +1780,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 10px;
   }
   #why-choose-1840 .cs-video-wrapper video img,
   #why-choose-1840 .cs-video-wrapper .cs-picture img {
