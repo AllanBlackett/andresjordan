@@ -243,7 +243,25 @@ wrapper.addEventListener('click', (e) => {
   if (!isOpen) item.classList.add('active');
 });
 
-        
 
+//? ===== Universal Language Switcher (works on ES & EN) =====
+  (function () {
+    // Detect current locale from <html lang="...">
+    var lang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+    var isEnglish = lang.indexOf('en') === 0;   // 'en' or 'en-US'
+    var targetBase = isEnglish ? '/' : '/en/';  // EN -> ES, ES -> EN
+
+    // Preserve in-page hash (#section) when switching
+    function withHash(base) {
+      var h = window.location.hash || '';
+      return base + h;
+    }
+
+    // Update both desktop pill and mobile link
+    var links = document.querySelectorAll('.cs-lang-cta, .cs-lang-mobile');
+    links.forEach(function (a) {
+      a.setAttribute('href', withHash(targetBase));
+    });
+  })();
                                 
                                   

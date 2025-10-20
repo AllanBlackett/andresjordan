@@ -44,7 +44,7 @@
       <img src="/assets/images/logo.png" alt="logo" width="197" height="43" aria-hidden="true" decoding="async">
     </a>
 
-    <!-- Navigation List -->
+    <!-- Navigation -->
     <nav class="cs-nav" role="navigation">
       <!-- Mobile Nav Toggle -->
       <button class="cs-toggle" aria-label="mobile menu toggle">
@@ -57,15 +57,21 @@
 
       <div class="cs-ul-wrapper">
         <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-          <li class="cs-li"><a href="#hero-2042" class="cs-li-link cs-active">Home</a></li>
-          <li class="cs-li"><a href="#sbsr-1080" class="cs-li-link">Programs</a></li>
-          <li class="cs-li"><a href="#sbsr-1816" class="cs-li-link">About</a></li>
+          <!-- Language switch (MOBILE) -->
+          <li class="cs-li cs-only-mobile">
+            <a href="/" class="cs-li-link cs-lang-mobile" aria-label="Cambiar a Español" lang="es">Español</a>
+          </li>
+
+          <li class="cs-li"><a href="#hero-2042"   class="cs-li-link cs-active">Home</a></li>
+          <li class="cs-li"><a href="#sbsr-1080"  class="cs-li-link">Programs</a></li>
+          <li class="cs-li"><a href="#sbsr-1816"  class="cs-li-link">About</a></li>
           <li class="cs-li"><a href="#reviews-1673" class="cs-li-link">Reviews</a></li>
-          <li class="cs-li"><a href="#cta-52" class="cs-li-link">Contact</a></li>
+          <li class="cs-li"><a href="#cta-52"     class="cs-li-link">Contact</a></li>
         </ul>
       </div>
     </nav>
 
+    <!-- WhatsApp CTA (desktop) -->
     <a href="https://wa.me/573229095077?text=Hi%20Andr%C3%A9s%2C%20I%27d%20like%20to%20book%20a%20trial%20class.%20%F0%9F%91%8A"
        target="_blank" rel="noopener" class="cs-nav-whatsapp is-lg" aria-label="Chat on WhatsApp">
       <svg class="cs-wa-icon" viewBox="0 0 32 32" aria-hidden="true">
@@ -74,8 +80,12 @@
       </svg>
       <span class="cs-wa-text">WhatsApp</span>
     </a>
+
+    <!-- Language switch (DESKTOP) -->
+    <a href="/" class="cs-lang-cta" aria-label="Cambiar a Español" lang="es">ES</a>
   </div>
 </header>
+
 
 <!-- ============================================ -->
 <!--               Hero - Video                   -->

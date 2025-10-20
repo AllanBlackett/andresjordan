@@ -5,109 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Clases de boxeo y entrenamiento personal en Pereira con Andrés Jordan. Todos los niveles. Reserva tu clase de prueba por WhatsApp.">
 
-    <!-- CAnonical + Open Graph -->
-     <link rel="canonical" href="https://tudominio.com/">
-<meta property="og:title" content="Clases de Boxeo en Pereira | Andrés Jordan">
-<meta property="og:description" content="Entrena con un competidor con experiencia. Todos los niveles. Reserva por WhatsApp.">
-<meta property="og:image" content="https://tudominio.com/assets/images/og.jpg">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_CO">
+    <!-- Canonical + Open Graph -->
+    <link rel="canonical" href="https://tudominio.com/">
+    <meta property="og:title" content="Clases de Boxeo en Pereira | Andrés Jordan">
+    <meta property="og:description" content="Entrena con un competidor con experiencia. Todos los niveles. Reserva por WhatsApp.">
+    <meta property="og:image" content="https://tudominio.com/assets/images/og.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
 
     <title>Boxeo Andrés Jordan</title>
+
     <!-- Favicons -->
-     <!-- PNG for modern browsers -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.webp">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/favicon-192x192.webp">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon/favicon-512x512.webp">
-    <!-- Link to external CSS -->
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
 <!-- ============================================ -->
 <!--                 Navigation                   -->
 <!-- ============================================ -->
-
 <header id="cs-navigation">
-    <div class="cs-container">
-        <!--Nav Logo-->
-        <a href="index.html" class="cs-logo" aria-label="back to home">
-            <img src="assets/images/logo.png" alt="logo" width="197" height="43" aria-hidden="true" decoding="async">
-        </a>
-        <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
-            <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" aria-label="mobile menu toggle">
-                <div class="cs-box" aria-hidden="true">
-                    <span class="cs-line cs-line1" aria-hidden="true"></span>
-                    <span class="cs-line cs-line2" aria-hidden="true"></span>
-                    <span class="cs-line cs-line3" aria-hidden="true"></span>
-                </div>
-            </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-            <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                    <li class="cs-li">
-                        <a href="#hero-2042" class="cs-li-link cs-active">
-                            Inicio
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="#sbsr-1080" class="cs-li-link">
-                            Programas
-                        </a>
-                    </li>
+  <div class="cs-container">
+    <!-- Nav Logo -->
+    <a href="index.html" class="cs-logo" aria-label="Ir al inicio">
+      <img src="assets/images/logo.png" alt="logo" width="197" height="43" aria-hidden="true" decoding="async">
+    </a>
 
-                    <!--! Dropdown -->
-                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
-                    <!-- <li class="cs-li cs-dropdown" tabindex="0">
-                        <span class="cs-li-link">
-                            Services
-                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-red.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                        </span>
-                        <ul class="cs-drop-ul">
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Oil Changes</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Brake Replacement</a>
-                            </li>
-                        </ul>
-                    </li> -->
-                    <!--!-->
-                    <li class="cs-li">
-                        <a href="#sbsr-1816" class="cs-li-link">
-                            Sobre
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="#reviews-1673" class="cs-li-link">
-                            Testimonios
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="#cta-52" class="cs-li-link">
-                            Contacto
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <a href="https://wa.me/573229095077?text=Hola%20Andr%C3%A9s%2C%20quiero%20agendar%20mi%20clase%20de%20prueba.%20%F0%9F%A5%8A" target="_blank" rel="noopener"
-   class="cs-nav-whatsapp is-lg" aria-label="Chat on WhatsApp">
-  <svg class="cs-wa-icon" viewBox="0 0 32 32" aria-hidden="true">
-    <path fill="#25D366" d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.7 5.9L4 29l8.3-1.7c1.7 1 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3z"/>
-    <path fill="#fff" d="M23.4 20.9c-.3.9-1.8 1.6-2.5 1.7-.7.1-1.6.2-2.7-.2-1.6-.6-3.1-1.2-5.1-3.1-2-1.9-3.4-4.2-3.8-4.9-.4-.7-.9-2.4-.1-3.3.8-.9 1.1-1.3 1.9-1.3.5 0 1 .1 1.2.1.4.1.9 1.4 1.1 1.9.1.4.1.7-.1 1.1-.2.4-.4.6-.6.9-.2.2-.5.5-.2 1 .3.5 1.3 2.1 2.9 3.4 2 1.6 3.6 2.1 4.1 2.4.5.2.8.2 1.1-.1.3-.3 1.3-1.5 1.3-2 .1-.5.6-.4 1.1-.2.5.2 2.7 1.3 2.7 1.6z"/>
-  </svg>
-  <span class="cs-wa-text">WhatsApp</span>
-</a>
-    </div>
+    <!-- Navigation List -->
+    <nav class="cs-nav" role="navigation">
+      <!-- Mobile Nav Toggle -->
+      <button class="cs-toggle" aria-label="Abrir menú móvil">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+
+      <!-- Wrapper keeps the mobile list scrollable and full-height background -->
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          <!-- Language switch (MOBILE) -->
+          <li class="cs-li cs-only-mobile">
+            <a href="/en/" class="cs-li-link cs-lang-mobile" aria-label="Switch to English" lang="en">English</a>
+          </li>
+
+          <li class="cs-li">
+            <a href="#hero-2042" class="cs-li-link cs-active">Inicio</a>
+          </li>
+          <li class="cs-li">
+            <a href="#sbsr-1080" class="cs-li-link">Programas</a>
+          </li>
+          <li class="cs-li">
+            <a href="#sbsr-1816" class="cs-li-link">Sobre</a>
+          </li>
+          <li class="cs-li">
+            <a href="#reviews-1673" class="cs-li-link">Testimonios</a>
+          </li>
+          <li class="cs-li">
+            <a href="#cta-52" class="cs-li-link">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- WhatsApp CTA (desktop) -->
+    <a href="https://wa.me/573229095077?text=Hola%20Andr%C3%A9s%2C%20quiero%20agendar%20mi%20clase%20de%20prueba.%20%F0%9F%A5%8A"
+       target="_blank" rel="noopener"
+       class="cs-nav-whatsapp is-lg" aria-label="Chatear por WhatsApp">
+      <svg class="cs-wa-icon" viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="#25D366" d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.7 5.9L4 29l8.3-1.7c1.7 1 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3z"/>
+        <path fill="#fff" d="M23.4 20.9c-.3.9-1.8 1.6-2.5 1.7-.7.1-1.6.2-2.7-.2-1.6-.6-3.1-1.2-5.1-3.1-2-1.9-3.4-4.2-3.8-4.9-.4-.7-.9-2.4-.1-3.3.8-.9 1.1-1.3 1.9-1.3.5 0 1 .1 1.2.1.4.1.9 1.4 1.1 1.9.1.4.1.7-.1 1.1-.2.4-.4.6-.6.9-.2.2-.5.5-.2 1 .3.5 1.3 2.1 2.9 3.4 2 1.6 3.6 2.1 4.1 2.4.5.2.8.2 1.1-.1.3-.3 1.3-1.5 1.3-2 .1-.5.6-.4 1.1-.2.5.2 2.7 1.3 2.7 1.6z"/>
+      </svg>
+      <span class="cs-wa-text">WhatsApp</span>
+    </a>
+
+    <!-- Language switch (DESKTOP) -->
+    <a href="/en/" class="cs-lang-cta" aria-label="Switch to English" lang="en">EN</a>
+  </div>
 </header>
+
 
 <!-- ============================================ -->
 <!--               Hero - Video                   -->

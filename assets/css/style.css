@@ -3168,4 +3168,34 @@ a.swdfooterlink:hover {
     grid-column: span 4;
   }
 }
+
+
+/*? Language switcher */
+.cs-lang-cta{
+  display:inline-flex; align-items:center; justify-content:center;
+  height: 2.25rem; padding: 0 .9rem;
+  font-weight:700; font-size:.95rem; line-height:1; letter-spacing:.02em;
+  color:#fff; text-decoration:none;
+  border:2px solid #fff; border-radius:999px;
+  transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  margin-left:.75rem;
+}
+.cs-lang-cta:hover{ background:#fff; color:#1a1a1a; transform:translateY(-1px); }
+
+/* Hide desktop pill on small screens */
+@media (max-width: 63.9375rem){
+  .cs-lang-cta{ display:none; }
+}
+
+/* Show a mobile item inside the menu */
+.cs-only-mobile{ display:none; }
+@media (max-width: 63.9375rem){
+  .cs-only-mobile{ display:block; }
+  .cs-lang-mobile{
+    display:inline-block;
+    padding:.65rem 1rem;
+    border:2px solid #fff; border-radius:999px;
+  }
+  .cs-lang-mobile:hover{ color:var(--secondary); border-color:var(--secondary); }
+}
                                 
